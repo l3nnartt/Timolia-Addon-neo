@@ -1,0 +1,10 @@
+{
+  "timolia": {
+    "settings": {
+      "name": "Timolia",
+      "enabled": {
+        "name": "Aktiviert"
+      }
+    }
+  }
+}
