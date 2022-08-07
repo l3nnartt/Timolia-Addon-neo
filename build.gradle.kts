@@ -36,7 +36,7 @@ plugins {
     id("java-library")
 }
 
-group = "com.github.l3nnartt.timoliaaddon"
+group = "com.github.l3nnartt"
 version = "0.0.1"
 
 plugins.apply("net.labymod.gradle.addon")
@@ -70,6 +70,6 @@ addon {
         //you can add maven dependencies here. the dependencies will then be downloaded by labymod.
         //mavenDependencies().add(MavenDependency("https://repo.maven.apache.org/maven2/", "com.google.guava:guava:31.1-jre"))
     }
-    
+
     internalRelease()
 }
