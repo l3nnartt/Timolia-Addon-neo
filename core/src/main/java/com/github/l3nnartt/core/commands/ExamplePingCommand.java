@@ -1,4 +1,4 @@
-package org.example.core.commands;
+package com.github.l3nnartt.core.commands;
 
 import com.google.inject.Inject;
 import net.kyori.adventure.text.Component;

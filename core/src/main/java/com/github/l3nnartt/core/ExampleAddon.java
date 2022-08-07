@@ -1,10 +1,10 @@
-package org.example.core;
+package com.github.l3nnartt.core;
 
+import com.github.l3nnartt.core.commands.ExamplePingCommand;
+import com.github.l3nnartt.core.listener.ExampleGameTickListener;
 import com.google.inject.Singleton;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonListener;
-import org.example.core.commands.ExamplePingCommand;
-import org.example.core.listener.ExampleGameTickListener;
 
 @Singleton
 @AddonListener
