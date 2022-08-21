@@ -8,20 +8,20 @@ import net.labymod.api.models.addon.annotation.AddonListener;
 
 @Singleton
 @AddonListener
-public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
+public class TimoliaAddon extends LabyAddon<TimoliaConfiguration> {
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
 
-    this.registerListener(ExampleGameTickListener.class);
-    this.registerCommand(ExamplePingCommand.class);
+    //this.registerListener(ExampleGameTickListener.class);
+    //this.registerCommand(ExamplePingCommand.class);
 
     this.logger().info("Enabled the Addon");
   }
 
   @Override
-  protected Class<ExampleConfiguration> configurationClass() {
-    return ExampleConfiguration.class;
+  protected Class<TimoliaConfiguration> configurationClass() {
+    return TimoliaConfiguration.class;
   }
 }
