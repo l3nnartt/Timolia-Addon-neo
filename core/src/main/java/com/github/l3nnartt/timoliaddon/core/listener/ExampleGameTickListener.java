@@ -1,10 +1,10 @@
-package com.github.l3nnartt.core.listener;
+package com.github.l3nnartt.timoliaddon.core.listener;
 
 import com.google.inject.Inject;
 import net.labymod.api.event.Phase;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.lifecycle.GameTickEvent;
-import com.github.l3nnartt.core.ExampleAddon;
+import com.github.l3nnartt.timoliaddon.core.ExampleAddon;
 
 public class ExampleGameTickListener {
 

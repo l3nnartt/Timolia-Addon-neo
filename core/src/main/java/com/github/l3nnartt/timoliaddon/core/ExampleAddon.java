@@ -1,7 +1,7 @@
-package com.github.l3nnartt.core;
+package com.github.l3nnartt.timoliaddon.core;
 
-import com.github.l3nnartt.core.commands.ExamplePingCommand;
-import com.github.l3nnartt.core.listener.ExampleGameTickListener;
+import com.github.l3nnartt.timoliaddon.core.commands.ExamplePingCommand;
+import com.github.l3nnartt.timoliaddon.core.listener.ExampleGameTickListener;
 import com.google.inject.Singleton;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonListener;

@@ -1,4 +1,4 @@
-package com.github.l3nnartt.core.commands;
+package com.github.l3nnartt.timoliaddon.core.commands;
 
 import com.google.inject.Inject;
 import net.kyori.adventure.text.Component;

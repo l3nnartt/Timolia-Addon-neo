@@ -36,7 +36,7 @@ plugins {
     id("java-library")
 }
 
-group = "com.github.l3nnartt.timolia-addon-neo"
+group = "com.github.l3nnartt.timoliaaddon"
 version = "0.0.1"
 
 plugins.apply("net.labymod.gradle.addon")
