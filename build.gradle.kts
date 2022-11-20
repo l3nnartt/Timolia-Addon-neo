@@ -71,5 +71,5 @@ addon {
         //mavenDependencies().add(MavenDependency("https://repo.maven.apache.org/maven2/", "com.google.guava:guava:31.1-jre"))
     }
 
-    internalRelease()
+    snapshotRelease()
 }
