@@ -1,4 +1,4 @@
-package com.github.l3nnartt.timoliaddon.core;
+package com.github.l3nnartt.timolia.core;
 
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;

@@ -63,7 +63,7 @@ addon {
         namespace("timolia")
         displayName("Timolia")
         author("L3nnart_")
-        description("This Addon adds some Server Support Features for Timolia.de")
+        description("This addon adds some server support features for Timolia.de")
         version(System.getenv().getOrDefault("VERSION", "0.0.1"))
         iconUrl("https://dl.lennartloesche.de/timolia/logo.png", project(":core"))
 
