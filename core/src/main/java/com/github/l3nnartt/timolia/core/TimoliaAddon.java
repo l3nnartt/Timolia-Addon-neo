@@ -5,6 +5,7 @@ import com.github.l3nnartt.timolia.core.handler.KitPacketHandler;
 import com.github.l3nnartt.timolia.core.handler.MapPacketHandler;
 import com.github.l3nnartt.timolia.core.handler.MatchPacketHandler;
 import com.github.l3nnartt.timolia.core.handler.StreakPacketHandler;
+import com.github.l3nnartt.timolia.core.hud.KitTextHudWidget;
 import com.github.l3nnartt.timolia.core.packet.EnemyPacket;
 import com.github.l3nnartt.timolia.core.packet.KitPacket;
 import com.github.l3nnartt.timolia.core.packet.MapPacket;
@@ -36,6 +37,8 @@ public class TimoliaAddon extends LabyAddon<TimoliaConfiguration> {
 
     //this.registerListener(ExampleGameTickListener.class);
     //this.registerCommand(ExamplePingCommand.class);
+
+    this.labyAPI().hudWidgetRegistry().register(new KitTextHudWidget("kit"));
 
     ProtocolService protocolService = LabyGuice.getInstance(ProtocolApi.class).getProtocolService();
     protocolService.registerAddonProtocol(new TimoliaProtocol());
