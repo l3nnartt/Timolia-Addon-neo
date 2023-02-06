@@ -1,13 +1,12 @@
 package com.github.l3nnartt.timolia.core.commands;
 
 import com.google.inject.Inject;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
+import net.labymod.api.client.component.Component;
+import net.labymod.api.client.component.format.NamedTextColor;
 import net.labymod.api.client.chat.command.Command;
 
 public class ExamplePingCommand extends Command {
 
-  @Inject
   private ExamplePingCommand() {
     super("ping", "pong");
   }
