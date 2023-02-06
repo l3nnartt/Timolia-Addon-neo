@@ -16,10 +16,9 @@ import com.github.l3nnartt.timolia.core.translator.KitPayloadTranslator;
 import com.github.l3nnartt.timolia.core.translator.MapPayloadTranslator;
 import com.github.l3nnartt.timolia.core.translator.MatchPayloadTranslator;
 import com.github.l3nnartt.timolia.core.translator.StreakPayloadTranslator;
+import net.labymod.api.Laby;
 import net.labymod.api.addon.LabyAddon;
-import net.labymod.api.inject.LabyGuice;
 import net.labymod.api.models.addon.annotation.AddonMain;
-import net.labymod.serverapi.protocol.api.ProtocolApi;
 import net.labymod.serverapi.protocol.packet.protocol.ProtocolService;
 import net.labymod.serverapi.protocol.packet.protocol.neo.NeoProtocol;
 
@@ -38,7 +37,7 @@ public class TimoliaAddon extends LabyAddon<TimoliaConfiguration> {
 
     this.labyAPI().hudWidgetRegistry().register(new KitTextHudWidget("kit"));
 
-    ProtocolService protocolService = LabyGuice.getInstance(ProtocolApi.class).getProtocolService();
+    ProtocolService protocolService = Laby.references().labyProtocolApi().getProtocolService();
     protocolService.registerAddonProtocol(new TimoliaProtocol());
 
     NeoProtocol neoProtocol = protocolService.getNeoProtocol();
