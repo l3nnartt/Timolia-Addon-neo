@@ -1,6 +1,7 @@
 package com.github.l3nnartt.timolia.core.translator;
 
 import com.github.l3nnartt.timolia.core.TimoliaAddon;
+import com.github.l3nnartt.timolia.core.hud.KitTextHudWidget;
 import com.github.l3nnartt.timolia.core.packet.KitPacket;
 import com.google.gson.JsonElement;
 import net.labymod.serverapi.protocol.packet.Packet;
@@ -15,6 +16,8 @@ public class KitPayloadTranslator extends AbstractLabyMod3PayloadTranslationList
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
     TimoliaAddon.getInstance().logger().info("Received KitPayload: " + messageContent);
+    JsonElement kit = messageContent.getAsJsonObject().get("kit");
+    KitTextHudWidget.getInstance().setKitLine(kit.getAsString());
     return this.writePacketBinary(new KitPacket());
   }
 
