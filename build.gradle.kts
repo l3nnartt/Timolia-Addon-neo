@@ -4,18 +4,18 @@ plugins {
     id("net.labymod.gradle.addon")
 }
 
-group = "org.example"
-version = "1.0.0"
+group = "com.github.l3nnartt"
+version = "0.0.1"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "com.github.l3nnartt.timolia.core" //change this to your main package name (used by all modules)
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "timolia"
+        displayName = "Timolia"
+        author = "L3nnart_"
+        description = "This addon adds some server support features for Timolia.de"
         minecraftVersion = "*"
         version = System.getenv().getOrDefault("VERSION", "0.0.1")
     }
@@ -23,6 +23,7 @@ labyMod {
     minecraft {
         registerVersions(
                 "1.8.9",
+                "1.12.2",
                 "1.17.1",
                 "1.18.2",
                 "1.19.2",
