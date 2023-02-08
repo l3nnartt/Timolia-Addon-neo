@@ -13,7 +13,8 @@ public class MapPayloadTranslator extends AbstractLabyMod3PayloadTranslationList
 
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
-    return this.writePacketBinary(new MapPacket());
+    String map = messageContent.getAsJsonObject().get("map").getAsString();
+    return this.writePacketBinary(new MapPacket(map));
   }
 
   @Override

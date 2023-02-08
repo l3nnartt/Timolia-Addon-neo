@@ -13,7 +13,8 @@ public class EnemyPayloadTranslator extends AbstractLabyMod3PayloadTranslationLi
 
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
-    return this.writePacketBinary(new EnemyPacket());
+    String enemy = messageContent.getAsJsonObject().get("enemy").getAsString();
+    return this.writePacketBinary(new EnemyPacket(enemy));
   }
 
   @Override

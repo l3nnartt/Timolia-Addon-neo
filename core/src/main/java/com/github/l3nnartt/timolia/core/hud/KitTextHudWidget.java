@@ -21,11 +21,9 @@ public class KitTextHudWidget extends TextHudWidget<TextHudWidgetConfig> {
     this.kitLine = super.createLine("Kit", "");
   }
 
-  // return instance from this class
   public static KitTextHudWidget getInstance() {
     return instance;
   }
-
 
   public TextLine getKitLine() {
     return kitLine;

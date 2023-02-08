@@ -13,7 +13,10 @@ public class MatchPayloadTranslator extends AbstractLabyMod3PayloadTranslationLi
 
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
-    return this.writePacketBinary(new MatchPacket());
+    String kit = messageContent.getAsJsonObject().get("kit").getAsString();
+    String map = messageContent.getAsJsonObject().get("map").getAsString();
+    String enemy = messageContent.getAsJsonObject().get("enemy").getAsString();
+    return this.writePacketBinary(new MatchPacket(map, kit,enemy));
   }
 
   @Override

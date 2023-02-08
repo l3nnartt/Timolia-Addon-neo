@@ -14,13 +14,12 @@ public class KitPayloadTranslator extends AbstractLabyMod3PayloadTranslationList
 
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
-    TimoliaAddon.getInstance().logger().info("Received KitPayload: " + messageContent);
-    return this.writePacketBinary(new KitPacket(messageContent));
+    String kit = messageContent.getAsJsonObject().get("kit").getAsString();
+    return this.writePacketBinary(new KitPacket(kit));
   }
 
   @Override
   public <T extends Packet> byte[] translateOutgoingPayload(T packet) {
     return new byte[0];
   }
-
 }

@@ -8,7 +8,6 @@ public class KitPacketHandler implements PacketHandler<KitPacket> {
 
   @Override
   public void handle(KitPacket packet) {
-    packet.setKit(packet.getMessageContent().getAsJsonObject().get("kit").getAsString());
     KitTextHudWidget.getInstance().setKitLine(packet.getKit());
   }
 }

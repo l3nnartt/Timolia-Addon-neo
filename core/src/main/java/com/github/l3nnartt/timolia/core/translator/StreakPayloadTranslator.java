@@ -13,7 +13,8 @@ public class StreakPayloadTranslator extends AbstractLabyMod3PayloadTranslationL
 
   @Override
   public byte[] translateIncomingPayload(JsonElement messageContent) {
-    return this.writePacketBinary(new StreakPacket());
+    String streak = messageContent.getAsJsonObject().get("streak").getAsString();
+    return this.writePacketBinary(new StreakPacket(streak));
   }
 
   @Override
